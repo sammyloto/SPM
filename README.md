@@ -8,7 +8,7 @@ Please refer to the Google group for clarification on any issue: https://groups.
 * Please make it your initiative to submit your assigned work on time and without being follwed around.
 * We are here to learn so mistakes are welcome as long as you can learn from them.
 * Communication is key, make sure you interact with fellow project members to ensure the smooth running of the project.
-* PARTICIPATION IS KEY.
+* **PARTICIPATION IS KEY.**
 
 ## Getting Started/ Contributing
 
