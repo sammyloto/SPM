@@ -1,4 +1,4 @@
-# SPM
+# SPM Group 1
 Android application that notifies students on the status of a borrowed book(s).
 
 Some of the considerations for this app include; Notification feature when a book is due using either USSD, in app notifications or email notifications.
@@ -40,7 +40,7 @@ Hosting options to be decided on later
 ## Authors
 
 * **Sammy Gacho** - *Initial work* - [sammyloto](https://github.com/sammyloto)
-* **Roy Malaba** - *Initial work* - [Royclassic]https://github.com/Royclassic)
+* **Roy Malaba** - *Initial work* - [Royclassic](https://github.com/Royclassic)
 * **Terence Amunga** - *Initial work* - [stondiki](https://github.com/stondiki)
 * **Faith Riguu** - *Initial work* - [faithriguu](https://github.com/faithriguu)
 * **Mourine Kaveni** - *Initial work* - [Kavenijoy](https://github.com/Kavenijoy)
@@ -49,7 +49,7 @@ Hosting options to be decided on later
 * **Victoria Solmem** - *Initial work* - [maripass](https://github.com/maripass)
 * **Jed Bobby Munene** - *Initial work* - [jbmunene](https://github.com/jbmunene)
 * **Peter Karugo** - *Initial work* - [###](https://github.com/)
-* **Teressia Muiruri** - *Initial work* - [###](https://github.com/)
+* **Teressia Muiruri** - *Initial work* - [TessyWangari]https://github.com/TessyWangari)
 * **Dennis Bikambo** - *Initial work* - [###](https://github.com/)
 * **Nosim Eleen** - *Initial work* - [###](https://github.com/)
 * **Vanessa Waithaka** - *Initial work* - [###](https://github.com/)
