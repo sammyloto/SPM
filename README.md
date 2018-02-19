@@ -50,11 +50,10 @@ Hosting options to be decided on later
 * **Jed Bobby Munene** - *Initial work* - [jbmunene](https://github.com/jbmunene)
 * **Peter Karugo** - *Initial work* - [###](https://github.com/)
 * **Teressia Muiruri** - *Initial work* - [TessyWangari](https://github.com/TessyWangari)
-* **Dennis Bikambo** - *Initial work* - [###](https://github.com/)
-* **Nosim Eleen** - *Initial work* - [###](https://github.com/)
+* **Dennis Bikambo** - *Initial work* - [DennisBikambo](https://github.com/DennisBikambo)
+* **Nosim Eleen** - *Initial work* - [emapelu](https://github.com/emapelu)
 * **Vanessa Waithaka** - *Initial work* - [###](https://github.com/)
 * **Joy Waitherero** - *Initial work* - [###](https://github.com/)
-* **Nosim Eleen** - *Initial work* - [###](https://github.com/)
 
 
 See also the list of [contributors](https://github.com/sammyloto/Teekets/graphs/contributors) who participated in this project.
