@@ -46,6 +46,7 @@ Hosting options to be decided on later
 * **Mourine Kaveni** - *Initial work* - [Kavenijoy](https://github.com/Kavenijoy)
 * **Augustin Cimana** - *Initial work* - [NdaganoCimana](https://github.com/NdaganoCimana)
 * **Amour Gasana** - *Initial work* - [amourgas](https://github.com/amourgas)
+* **Allarassem Maxwell** - *Initial work* - [allarassemmaxwell](https://github.com/allarassemmaxwell)
 * **Victoria Solmem** - *Initial work* - [maripass](https://github.com/maripass)
 * **Jed Bobby Munene** - *Initial work* - [jbmunene](https://github.com/jbmunene)
 * **Peter Karugo** - *Initial work* - [###](https://github.com/)
