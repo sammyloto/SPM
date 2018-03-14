@@ -1,14 +1,43 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="primary">
+    <ion-buttons side="right">
+      <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    </ion-buttons>
+    <ion-title>Home</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only color="royal" (click)="gotToSearch()">
+        <ion-icon ios="ios-search" md="md-search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
+ 
+<ion-content class="card-background-page">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card>
+    <img src="assets/imgs/book.jpeg"/>
+    <div class="card-title">Author name</div>
+    <div class="card-subtitle">Title<br> <small>01-01-2018</small></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/book.jpeg"/>
+    <div class="card-title">Author name</div>
+    <div class="card-subtitle">Title <br><small>01-01-2018</small></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/book.jpeg"/>
+<div class="card-title">Author name</div>
+    <div class="card-subtitle">Title<br> <small>01-01-2018</small></div>
+  </ion-card>
+
+  <ion-card>
+    <img src="assets/imgs/book.jpeg"/>
+<div class="card-title">Author name</div>
+    <div class="card-subtitle">Title<br> <small>01-01-2018</small></div>
+  </ion-card>
+
 </ion-content>

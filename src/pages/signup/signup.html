@@ -1,0 +1,50 @@
+<ion-header>
+
+<!--   <ion-navbar>
+    <ion-title>signup</ion-title>
+  </ion-navbar> -->
+
+</ion-header>
+
+
+<ion-content class="background">
+	<ion-card>
+		<ion-card-header>
+			Signup
+		</ion-card-header>
+		<ion-card-content>
+			<ion-list>
+			<ion-item>
+					<ion-input type="text" placeholder="Reg number" ></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="text" placeholder="Full name" ></ion-input>
+				</ion-item>
+				<ion-list>
+				  <ion-item>
+				    <ion-label>Department</ion-label>
+				    <ion-select [(ngModel)]="gaming">
+				      <ion-option value="nes">Computer Science</ion-option>
+				      <ion-option value="n64">BCom</ion-option>
+				      <ion-option value="ps">Education</ion-option>
+				      <ion-option value="genesis">Social Science</ion-option>
+				      <ion-option value="saturn">Development Studies</ion-option>
+				      <ion-option value="snes">Physics</ion-option>
+				    </ion-select>
+				  </ion-item>
+				</ion-list>
+				<ion-item>
+					<ion-input type="email" placeholder="Email"  ></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="Password" ></ion-input>
+				</ion-item>
+				<ion-item>
+					<ion-input type="password" placeholder="Confirm password" ></ion-input>
+				</ion-item>
+				<button ion-button block round outline color="light" (click)="goToHome()">Create account</button>
+				<button ion-button full clear color="light" (click)="goBack()">Go Back</button>
+			</ion-list>
+		</ion-card-content>
+	</ion-card>
+</ion-content>

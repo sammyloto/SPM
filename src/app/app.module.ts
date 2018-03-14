@@ -5,12 +5,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { DatabaseProvider } from '../providers/database/database';
+
+import { NativeStorage } from '@ionic-native/native-storage';
+import { SQLite } from '@ionic-native/sqlite';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +21,14 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    NativeStorage,
+    SQLite,
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    DatabaseProvider
   ]
 })
 export class AppModule {}
