@@ -32,8 +32,7 @@ export class MenuPage {
     { title: 'Profile', pageName: 'ProfilePage', icon: 'person' },
     { title: 'Notifications', pageName: 'NotificationsPage', icon: 'notifications' },
     { title: 'Share', pageName: 'SharePage', icon: 'share' },
-    { title: 'Settings', pageName: 'SettingsPage', icon: 'settings' },
-    { title: 'Log out', pageName: 'HomePage', icon: 'log-out' }
+    { title: 'Settings', pageName: 'SettingsPage', icon: 'settings' }
   ];
  
   constructor(public navCtrl: NavController) { }

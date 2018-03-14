@@ -11,5 +11,38 @@
 
 
 <ion-content padding>
-	This page has no tabs!
+  <form>
+      <div align="center">
+          
+        <!-- <h1> Profile</h1> -->
+        <img class="profile-image" src="assets/imgs/profile.png">
+      </div>
+  <ion-list>
+      <ion-item>
+      	<h5>Name: <b>Maitre GYms</b></h5>
+      </ion-item>
+      <ion-item>
+      	<h5>Reg number: <b>1020020</b></h5>
+      </ion-item>
+      <ion-item>
+      	<h5>Email: <b>cherchesbien@gmail.com</b></h5>
+      </ion-item>
+      <ion-item>
+      	<h5>Department: <b>Computer Science</b></h5>
+      </ion-item>
+      <ion-item>
+          <ion-label>Birth Date</ion-label>
+          <ion-datetime required name="birthdate" displayFormat="DD MMM YYYY" pickerFormat="DD MMM YYYY" [(ngModel)]="dob" [ngModelOptions]="{standalone:true}"></ion-datetime>
+      </ion-item>
+  </ion-list>
+</form>
+<ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-select [(ngModel)]="gaming">
+      <ion-option value="nes">Male</ion-option>
+      <ion-option value="n64">Female</ion-option>
+    </ion-select>
+  </ion-item>
+
+    <button color="primary" ion-button block (click)="save()">Save</button>
 </ion-content>
