@@ -15,6 +15,10 @@ from .models import myUsers
 from .functions import *
 
 
+from django.core.mail import send_mail
+from django.conf import settings
+
+
 # Create your views here.
 
 def home(request):
@@ -195,18 +199,26 @@ class borrow_bookClass(APIView):
 		Today 		= datetime.now().date()
 		currentTime = datetime.now().time()
 
-		bookSlug 	= request.GET.get('bookSlug', None)
-		userSlug 	= request.GET.get('userSlug', None)
-		borrowFromDate 	= request.GET.get('borrowFromDate', None)
+		bookSlug 	= self.request.GET.get('bookSlug', None)
+		userSlug 	= self.request.GET.get('userSlug', None)
+		borrowFromDate 	= self.request.GET.get('borrowFromDate', None)
+
+		email_borrow_date 	= request.GET.get('borrowFromDate', None)
+		email_borrow_time 	= request.GET.get('borrowFromTime', None)
+
 		borrowFromTime 	= request.GET.get('borrowFromTime', None)
 		borrowFromDate 	= datetime.strptime(borrowFromDate, "%Y-%m-%d").date()
 		borrowFromTime 	= datetime.strptime(borrowFromTime, "%H:%M").time()
 
-		returned_date 	= request.GET.get('returned_date', None) 
-		returned_date 	= datetime.strptime(returned_date, "%Y-%m-%d").date()
+		returned_date 	= request.GET.get('returned_date', None)
 		returned_time 	= request.GET.get('returned_time', None)
-		returned_time 	= datetime.strptime(returned_time, "%H:%M").time()
 
+		email_returned_date 	= request.GET.get('returned_date', None) 
+		email_returned_time 	= request.GET.get('returned_time', None)
+
+		returned_date 	= datetime.strptime(returned_date, "%Y-%m-%d").date()
+
+		returned_time 	= datetime.strptime(returned_time, "%H:%M").time()
 	
 
 
@@ -225,9 +237,21 @@ class borrow_bookClass(APIView):
 				# check if requested date and time is greater than current time
 				# check if book is available ie not borrowed or ordered
 
+				prenom = userSlug
+				email = "allarassemmaxwell@gmail.com"
+				sujet = "Book notification"
+				message = "You have borrowed: "+bookSlug+" on "+email_borrow_date+" at "+email_borrow_time+"\n\n It should be returned on "+email_returned_date+" at "+email_returned_time
+
+				title = 'Cuea Library App '+prenom+' subject: '+sujet
+				body = 'Name: '+prenom+'\n\nEmail: '+email+'\n\nSujet: '+sujet+'\n\nMessage:\n '+message
+				send_mail(title, body, settings.EMAIL_HOST_USER, ['allarassemmaxwell@gmail.com'], fail_silently=False)
+
+
 				BorrowBook.objects.create(borrower=theUserInstance, borrowedBook=theBookInstance, bookNeededFromDate=borrowFromDate, bookNeededFromTime=borrowFromTime, returned_date=returned_date, returned_time=returned_time)
 
+
 				return Response([{"result": "1", "success": "Book successfuly ordered!", "error": ""}])
+
 
 
 
@@ -275,8 +299,22 @@ class notificationsClass(ListAPIView):
 
 	def get_queryset(self, *arg, **kwargs):
 
-		queryset = BorrowBook.objects.all()
-		if not queryset:
-			return Response([{"result": "0", "success": "", "error": "You have not borrowed a book yet"}])
+		# queryset = BorrowBook.objects.all()
+		# if not queryset:
+		# 	return Response([{"result": "0", "success": "", "error": "You have not borrowed a book yet"}])
+		# else:
+		# 	return queryset
+
+
+
+		userSlug 		= self.request.GET.get('userSlug', None)
+
+		checkUser = myUsers.objects.filter(slug=userSlug).count()
+		if checkUser == 0:
+			queryset = BorrowBook.objects.all()[:3]
 		else:
-			return queryset
+			return Response([{"result": "0", "success": "", "error": "You have not borrowed a book yet"}])
+
+		return queryset
+
+
